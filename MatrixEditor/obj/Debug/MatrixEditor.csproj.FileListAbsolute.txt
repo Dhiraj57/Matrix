@@ -30,3 +30,10 @@ F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\MatrixEd
 F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\MatrixEditor.Properties.Resources.resources
 F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\MatrixEditor.csproj.GenerateResource.cache
 F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\MatrixEditor.csproj.CoreCompileInputs.cache
+F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\GameProject\NewProjectView.g.cs
+F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\GameProject\OpenProjectView.g.cs
+F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\GameProject\ProjectBrowserDialog.g.cs
+F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\GameProject\NewProjectView.baml
+F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\GameProject\OpenProjectView.baml
+F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\GameProject\ProjectBrowserDialog.baml
+F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\GeneratedInternalTypeHelper.g.cs
