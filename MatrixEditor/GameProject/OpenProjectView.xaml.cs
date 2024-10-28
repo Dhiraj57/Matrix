@@ -24,5 +24,29 @@ namespace MatrixEditor.GameProject
         {
             InitializeComponent();
         }
+
+        private void OnOpenButtonClick(object sender, RoutedEventArgs e)
+        {
+            OpenSelectedProject();
+        }
+
+        private void OnListBoxItemMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            OpenSelectedProject();
+        }
+
+        private void OpenSelectedProject()
+        {
+            var project = OpenProject.Open(projectListBox.SelectedItem as ProjectData);
+            bool dialogResult = false;
+            var win = Window.GetWindow(this);
+
+            if (project != null)
+            {
+                dialogResult = true;
+            }
+
+            win.DialogResult = dialogResult;
+        }
     }
 }

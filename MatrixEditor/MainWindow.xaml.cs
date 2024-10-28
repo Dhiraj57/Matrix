@@ -42,7 +42,8 @@ namespace MatrixEditor
             }
             else
             {
-                // Open Project
+                Project.current?.Unload();
+                DataContext = projectBrowser.DataContext;
             }
         }
     }
