@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\obj\Debug\
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\
 MatrixEditor
 none
 false
 DEBUG;TRACE
-F:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\App.xaml
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\App.xaml
 4-1463320145
 
-9-1627119183
-13-1310406943
+12-1362137297
+141990183084
 GameProject\NewProjectView.xaml;GameProject\OpenProjectView.xaml;GameProject\ProjectBrowserDialog.xaml;MainWindow.xaml;
 
 True
