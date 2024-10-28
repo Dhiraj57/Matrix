@@ -1,0 +1,8 @@
+<Game z:Id="i1" xmlns="http://schemas.datacontract.org/2004/07/MatrixEditor.GameProject" 
+xmlns:i="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+<Name>{0}</Name>
+<Path>{1}</Path>
+<_scenes><Scene z:Id="i2"><Name>Default Scene</Name>
+<Project z:Ref="i1"/></Scene></_scenes>
+</Game>
