@@ -59,3 +59,9 @@ G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\De
 G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\MatrixEditor.csproj.CoreCompileInputs.cache
 G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\MatrixEditor.exe
 G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\MatrixEditor.pdb
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Editors\WorldEditor\ProjectLayoutView.g.cs
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Utilities\UndoRedoView.g.cs
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Editors\WorldEditor\WorldEditorView.g.cs
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Editors\WorldEditor\ProjectLayoutView.baml
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Editors\WorldEditor\WorldEditorView.baml
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Utilities\UndoRedoView.baml

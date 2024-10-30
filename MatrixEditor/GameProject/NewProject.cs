@@ -62,6 +62,7 @@ namespace MatrixEditor.GameProject
         }
 
         private string _projectPath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}\MatrixProjects\";
+
         public string ProjectPath
         {
             get => _projectPath;

@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Windows;
+using System.Windows.Input;
 
 namespace MatrixEditor.GameProject
 {
@@ -15,12 +16,12 @@ namespace MatrixEditor.GameProject
         public static string Extension { get; } = ".matrix";
 
         [DataMember]
-        public string Name { get; private set; }
+        public string Name { get; private set; } = "New Project";
         [DataMember]
         public string Path { get; private set; }
         public string FullPath => $"{Path}{Name}{Extension}";
 
-        [DataMember]
+        [DataMember(Name = "Scenes")]
         private ObservableCollection<Scene> _scenes = new ObservableCollection<Scene>();
         public ReadOnlyObservableCollection<Scene> Scenes { get; private set; }
 
@@ -31,7 +32,7 @@ namespace MatrixEditor.GameProject
 
             set
             {
-                if(_activeScene != value)
+                if (_activeScene != value)
                 {
                     _activeScene = value;
                     OnPropertyChanged(nameof(ActiveScene));
@@ -39,7 +40,27 @@ namespace MatrixEditor.GameProject
             }
         }
 
-        public static Project current => Application.Current.MainWindow.DataContext as Project;
+        public static Project Current => Application.Current.MainWindow.DataContext as Project;
+
+        public static UndoRedo UndoRedo { get; } = new UndoRedo();
+
+        public ICommand Undo { get; private set; }
+        public ICommand Redo { get; private set; }
+
+        public ICommand AddScene { get; private set; }
+        public ICommand RemoveScene { get; private set; }
+
+        private void AddSceneInternal(string sceneName)
+        {
+            Debug.Assert(!string.IsNullOrEmpty(sceneName.Trim()));
+            _scenes.Add(new Scene(this, sceneName));
+        }
+
+        private void RemoveSceneInternal(Scene scene)
+        {
+            Debug.Assert(_scenes.Contains(scene));
+            _scenes.Remove(scene);
+        }
 
         public static Project Load(string file)
         {
@@ -47,12 +68,9 @@ namespace MatrixEditor.GameProject
             return Serializer.FromFile<Project>(file);
         }
 
-        public void Unload()
-        {
+        public void Unload() { }
 
-        }
-
-        public void Save(Project project)
+        public static void Save(Project project)
         {
             Serializer.ToFile(project, project.FullPath);
         }
@@ -67,6 +85,32 @@ namespace MatrixEditor.GameProject
             }
 
             ActiveScene = Scenes.FirstOrDefault(x =>  x.IsActive);
+
+            AddScene = new RelayCommand<Scene>(x =>
+            {
+                AddSceneInternal($"New Scene {_scenes.Count}");
+                var newScene = _scenes.Last();
+                var sceneIndex = _scenes.Count - 1;
+
+                UndoRedo.Add(new UndoRedoAction(
+                    () => RemoveSceneInternal(newScene),
+                    () => _scenes.Insert(sceneIndex, newScene),
+                    $"Add {newScene.Name}"));
+            });
+
+            RemoveScene = new RelayCommand<Scene>(x =>
+            {
+                var sceneIndex = _scenes.IndexOf(x);
+                RemoveSceneInternal(x);
+
+                UndoRedo.Add(new UndoRedoAction(
+                    () => _scenes.Insert(sceneIndex, x),
+                    ()=> RemoveSceneInternal(x),
+                    $"Remove {x.Name}"));          
+            }, x => !x.IsActive);
+
+            Undo = new RelayCommand<object>(x => UndoRedo.Undo());
+            Redo = new RelayCommand<object>(x => UndoRedo.Redo());
         }
 
         public Project(string name, string path)
@@ -74,7 +118,7 @@ namespace MatrixEditor.GameProject
             Name = name;
             Path = path;
 
-            _scenes.Add(new Scene(this, "Default Scene"));
+            OnDeserialized(new StreamingContext());
         }
     }
 }

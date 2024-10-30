@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\App.xaml
-4-1463320145
+7-350186510
 
-14-362801632
+19-317956484
 141990183084
-GameProject\NewProjectView.xaml;GameProject\OpenProjectView.xaml;GameProject\ProjectBrowserDialog.xaml;MainWindow.xaml;
+Editors\WorldEditor\ProjectLayoutView.xaml;Editors\WorldEditor\WorldEditorView.xaml;GameProject\NewProjectView.xaml;GameProject\OpenProjectView.xaml;GameProject\ProjectBrowserDialog.xaml;MainWindow.xaml;Utilities\UndoRedoView.xaml;
 
 False
 

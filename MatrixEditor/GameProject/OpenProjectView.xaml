@@ -12,7 +12,7 @@
     
     <StackPanel Background="White">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <ListBox Width="195" Height="250" ItemsSource="{Binding Projects}" x:Name="projectListBox"
+            <ListBox Width="195" Height="250" ItemsSource="{Binding Projects}" x:Name="projectsListBox"
                      SelectedIndex="0">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
@@ -30,7 +30,7 @@
             </ListBox>
             <Border Width="400" Height="250" Margin="5,0,0,0">
                 <Border.Background>
-                    <ImageBrush ImageSource="{Binding Path=SelectedItem.Screenshot, ElementName=projectListBox}"/>
+                    <ImageBrush ImageSource="{Binding Path=SelectedItem.Screenshot, ElementName=projectsListBox}"/>
                 </Border.Background>
             </Border>
         </StackPanel>
