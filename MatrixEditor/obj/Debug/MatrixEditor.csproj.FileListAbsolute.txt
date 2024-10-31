@@ -67,3 +67,8 @@ G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\De
 G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Utilities\UndoRedoView.baml
 G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Editors\WorldEditor\GameEntityView.g.cs
 G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Editors\WorldEditor\GameEntityView.baml
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Utilities\LoggerView.g.cs
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Utilities\LoggerView.baml
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Dictionaries\ControlTemplates.g.cs
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\Dictionaries\ControlTemplates.baml
+G:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\obj\Debug\App.baml

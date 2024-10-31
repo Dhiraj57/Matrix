@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MatrixEditor.Utilities
 {
@@ -43,10 +40,18 @@ namespace MatrixEditor.Utilities
             _undoAction = undoAction;
             _redoAction = redoAction;
         }
+
+        public UndoRedoAction(string property, object instance, object undoValue, object redoValue, string name) :
+            this(
+                () => instance.GetType().GetProperty(property).SetValue(instance, undoValue),
+                () => instance.GetType().GetProperty(property).SetValue(instance, redoValue),
+                name )
+        { }
     }
 
     public class UndoRedo
     {
+        private bool _enableAdd = true;
         private readonly ObservableCollection<IUndoRedo> _undoList = new ObservableCollection<IUndoRedo>();
         private readonly ObservableCollection<IUndoRedo> _redoList = new ObservableCollection<IUndoRedo>();
 
@@ -61,8 +66,11 @@ namespace MatrixEditor.Utilities
 
         public void Add(IUndoRedo command)
         {
-            _undoList.Add(command);
-            _redoList.Clear();
+            if(_enableAdd)
+            {
+                _undoList.Add(command);
+                _redoList.Clear();
+            }
         }
 
         public void Undo()
@@ -72,7 +80,10 @@ namespace MatrixEditor.Utilities
                 var command = _undoList.Last();
                 _undoList.RemoveAt(_undoList.Count - 1);
 
+                _enableAdd = false;
                 command.Undo();
+                _enableAdd = true;
+                
                 _redoList.Insert(0, command);
             }
         }
@@ -84,7 +95,10 @@ namespace MatrixEditor.Utilities
                 var commmad = _redoList.First();
                 _redoList.RemoveAt(0);
 
+                _enableAdd = false;
                 commmad.Redo();
+                _enableAdd = true;
+
                 _undoList.Add(commmad);
             }  
         }
