@@ -1,4 +1,13 @@
 ﻿
-
-FF:\Projects\Personal Projects\Game Engine\Matrix\MatrixEditor\MainWindow.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\App.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\Dictionaries\ControlTemplates.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\Editors\WorldEditor\GameEntityView.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\Editors\WorldEditor\ProjectLayoutView.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\Editors\WorldEditor\WorldEditorView.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\GameProject\NewProjectView.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\GameProject\OpenProjectView.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\GameProject\ProjectBrowserDialog.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\MainWindow.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\Utilities\LoggerView.xaml;;
+FG:\Projects\Personal Projects\Programming\Game Engine\Matrix\MatrixEditor\Utilities\UndoRedoView.xaml;;
 

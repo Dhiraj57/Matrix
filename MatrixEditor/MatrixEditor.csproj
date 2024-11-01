@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +56,63 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Components\Component.cs" />
+    <Compile Include="Components\GameEntity.cs" />
+    <Compile Include="Components\Transform.cs" />
+    <Compile Include="Dictionaries\ControlTemplates.xaml.cs">
+      <DependentUpon>ControlTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\WorldEditor\GameEntityView.xaml.cs">
+      <DependentUpon>GameEntityView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\WorldEditor\ProjectLayoutView.xaml.cs">
+      <DependentUpon>ProjectLayoutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\WorldEditor\WorldEditorView.xaml.cs">
+      <DependentUpon>WorldEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameProject\NewProject.cs" />
+    <Compile Include="GameProject\OpenProject.cs" />
+    <Compile Include="GameProject\Project.cs" />
+    <Compile Include="GameProject\Scene.cs" />
+    <Compile Include="Utilities\Logger.cs" />
+    <Compile Include="Utilities\LoggerView.xaml.cs">
+      <DependentUpon>LoggerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Serializer.cs" />
+    <Compile Include="Utilities\UndoRedo.cs" />
+    <Compile Include="Utilities\UndoRedoView.xaml.cs">
+      <DependentUpon>UndoRedoView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Dictionaries\ControlTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Editors\WorldEditor\GameEntityView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Editors\WorldEditor\ProjectLayoutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Editors\WorldEditor\WorldEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameProject\NewProjectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameProject\OpenProjectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameProject\ProjectBrowserDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,10 +121,28 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Common\ViewModelBase.cs" />
+    <Compile Include="GameProject\NewProjectView.xaml.cs">
+      <DependentUpon>NewProjectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameProject\OpenProjectView.xaml.cs">
+      <DependentUpon>OpenProjectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameProject\ProjectBrowserDialog.xaml.cs">
+      <DependentUpon>ProjectBrowserDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Utilities\LoggerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Utilities\UndoRedoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -94,5 +170,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
