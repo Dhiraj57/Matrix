@@ -35,7 +35,7 @@ namespace MatrixEditor.GameProject
         public List<ProjectData> Projects { get; set; }
     }
 
-    public class OpenProject
+    class OpenProject
     {
         private static readonly string _applicationDataPath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\MatrixEditor\";
         private static readonly string _projectDataPath;
@@ -101,6 +101,8 @@ namespace MatrixEditor.GameProject
             catch(Exception ex)
             {
                 Debug.WriteLine(ex.Message);
+                Logger.Log(MessageType.Error, $"Failed to read project data");
+                throw;
             }
         }
     }
